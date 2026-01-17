@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: transparent !important;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* HIGH-GLOSS TOP BANNER */
+        .banner-bar {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 130px;
+            /* Deep purple glossy gradient */
+            background: linear-gradient(180deg, rgba(75, 0, 130, 0.9) 0%, rgba(30, 0, 50, 0.95) 100%);
+            border-top: 4px solid #d400ff;
+            border-bottom: 4px solid #d400ff;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.9), inset 0 0 30px rgba(255, 255, 255, 0.15);
+            z-index: 10;
+        }
+
+        /* CHARACTER IMAGE ONLY */
+        .character-art {
+            height: 240px; 
+            margin-top: -30px; 
+            margin-left: 50px;
+            filter: drop-shadow(0 0 20px #9d00ff) contrast(1.1) brightness(1.2);
+            z-index: 20;
+        }
+
+        /* THE GLOSSY SHINE ANIMATION */
+        .banner-bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(
+                to right, 
+                rgba(255,255,255,0) 0%, 
+                rgba(255,255,255,0.25) 50%, 
+                rgba(255,255,255,0) 100%
+            );
+            transform: skewX(-35deg);
+            animation: gloss-sweep 6s infinite ease-in-out;
+        }
+
+        @keyframes gloss-sweep {
+            20% { left: 150%; }
+            100% { left: 150%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner-bar">
+        <img src="https://raw.githubusercontent.com/KFruti88/Dark-Terror/main/Transparent%20Dark%20Terror.png" class="character-art">
+    </div>
+
+</body>
+</html>
