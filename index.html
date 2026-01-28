@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ Chat Connection</title>
     <style>
         body, html {
             margin: 0;
@@ -12,60 +17,32 @@
             height: 100%;
         }
 
-        /* HIGH-GLOSS TOP BANNER */
-        .banner-bar {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            width: 100%;
-            height: 130px;
-            /* Deep purple glossy gradient */
-            background: linear-gradient(180deg, rgba(75, 0, 130, 0.9) 0%, rgba(30, 0, 50, 0.95) 100%);
-            border-top: 4px solid #d400ff;
-            border-bottom: 4px solid #d400ff;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.9), inset 0 0 30px rgba(255, 255, 255, 0.15);
-            z-index: 10;
-        }
-
-        /* CHARACTER IMAGE ONLY */
-        .character-art {
-            height: 240px; 
-            margin-top: -30px; 
-            margin-left: 50px;
-            filter: drop-shadow(0 0 20px #9d00ff) contrast(1.1) brightness(1.2);
-            z-index: 20;
-        }
-
-        /* THE GLOSSY SHINE ANIMATION */
-        .banner-bar::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 40%;
+        /* 90% Width Standard */
+        .chat-frame-wrapper {
+            width: 90%;
             height: 100%;
-            background: linear-gradient(
-                to right, 
-                rgba(255,255,255,0) 0%, 
-                rgba(255,255,255,0.25) 50%, 
-                rgba(255,255,255,0) 100%
-            );
-            transform: skewX(-35deg);
-            animation: gloss-sweep 6s infinite ease-in-out;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        @keyframes gloss-sweep {
-            20% { left: 150%; }
-            100% { left: 150%; }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
         }
     </style>
 </head>
 <body>
 
-    <div class="banner-bar">
-        <img src="https://raw.githubusercontent.com/KFruti88/Dark-Terror/main/Transparent%20Dark%20Terror.png" class="character-art">
+    <div class="chat-frame-wrapper">
+        <iframe 
+            src="https://streamlabs.com/widgets/chat-box/v1/CA984ECAC8A48AE8B3C75D47CDDE7997D5A56CC5BA9E955F5BC60E22A0E1C57951C003FF9DA687B4C5C45A8C11EC8E18B6422419124EE4D33663D1FD5FB302CB6D7C1272F05A3CE1BD954E7B60414E43C66133D2AB8E84BCEE1573136DBA74A24D8C482C98B6B751D9B795B8EC659E3556C82BA5D40FEFA14EA0A2D8BB"
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
     </div>
 
 </body>
